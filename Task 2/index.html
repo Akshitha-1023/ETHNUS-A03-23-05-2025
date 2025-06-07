@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image in Marquee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+        }
+        .separator {
+            border-top: 2px solid #ccc;
+            margin: 20px 0;
+        }
+        
+        /* Modern Marquee using CSS Animation */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 30px 0;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .marquee-image {
+            height: 180px;
+            margin-right: 40px;
+            vertical-align: middle;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+    </style>
+</head>
+<body>
+    <h1>IMAGE IN MARQUEE</h1>
+    
+    <p>On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look. You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly. To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template. </p>
+    
+    <div class="separator"></div>
+    
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <img class="marquee-image" src="image1.png" alt="Document Design 1">
+            <img class="marquee-image" src="image2.png" alt="Document Design 2">
+            <img class="marquee-image" src="image1.png" alt="Document Design 3">
+            <img class="marquee-image" src="image2.png" alt="Document Design 4">
+            <img class="marquee-image" src="image1.png" alt="Document Design 5">
+            <img class="marquee-image" src="image1.png" alt="Document Design 6">
+            <img class="marquee-image" src="image1.png" alt="Document Design 7">
+        </div>
+    </div>
+</body>
+</html>
