@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .form-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .form-container img {
+            width: 300px;
+            height: auto;
+            margin-right: 40px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        form {
+            flex: 1;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .name-fields, .address-fields {
+            display: flex;
+            gap: 10px;
+        }
+        .name-fields input, .address-fields input {
+            flex: 1;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Doctor Appointment Form</h1>
+
+    <div class="form-container">
+        <img src="doctor image.png" alt="Doctor Image">
+        <form>
+            <label for="appointmentDate">Appointment Date:</label>
+            <input type="text" id="appointmentDate" name="appointmentDate" placeholder="mm/dd/yyyy">
+
+            <label for="appointmentTime">Appointment Time:</label>
+            <input type="text" id="appointmentTime" name="appointmentTime" placeholder="--:-- --">
+
+            <label>Name:</label>
+            <div class="name-fields">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </div>
+
+            <div class="radio-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="#####">
+
+            <label>Address:</label>
+            <div class="address-fields">
+                <input type="text" id="city" name="city" placeholder="City">
+                <input type="text" id="state" name="state" placeholder="State">
+            </div>
+
+            <label for="query">Your Query:</label>
+            <textarea id="query" name="query"></textarea>
+
+            <div class="checkbox-group">
+                <label>Appointment Type:</label><br>
+                <input type="checkbox" id="cervix" name="appointmentType" value="Cervix checkup">
+                <label for="cervix">Cervix checkup</label><br>
+                <input type="checkbox" id="heart" name="appointmentType" value="Heart checkup">
+                <label for="heart">Heart checkup</label><br>
+                <input type="checkbox" id="eye" name="appointmentType" value="Eye check-up">
+                <label for="eye">Eye check-up</label><br>
+                <input type="checkbox" id="hearing" name="appointmentType" value="Hearing Test">
+                <label for="hearing">Hearing Test</label>
+            </div>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+</body>
+</html>
